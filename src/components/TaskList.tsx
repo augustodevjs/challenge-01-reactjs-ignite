@@ -21,11 +21,13 @@ export function TaskList() {
       return;
     }
 
-    setTasks([...tasks, {
+    const newTasks = {
       id: Math.floor(Math.random() * 10000000),
       title: newTaskTitle,
       isComplete: false
-    }]);
+    }
+
+    setTasks([...tasks, newTasks]);
 
     setNewTaskTitle('');
   }
